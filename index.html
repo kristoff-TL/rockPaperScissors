@@ -1,0 +1,46 @@
+<script>
+
+const choice = ["Rock", "Paper", "Scissors"]; // three choices
+
+function getComputerChoice(choice) {
+	return choice[Math.floor(Math.random() * choice.length)]; // computer randomly chooses from the array
+}
+let computerSelection = getComputerChoice(choice); // the computer choice is now assigned to computerSelection
+console.log(computerSelection);
+
+
+// Create a FUNCTION "getPlayerChoice" that takes case insensitive user input 
+	// player choice is assigned to variable called playerSelection
+
+
+// create a FUNCTION "game()"
+
+	// Create a FUNCTION "playRound"
+	// count rounds, only allow 5 rounds (use a loop)
+	// keeps score of each round and reports a winner or loser at the end
+
+	// if computerSelection === playerSelection
+		// display message "Its a Tie"
+
+	// else if either player chooses "Rock" and the other chose "Scissors"
+		// player who chose "Rock" wins round 
+			// return string "You Win! Rock beats Scissors"
+		// player who chose "Scissors" loses round
+			// return string "You Lose! Rock beats Scissors"
+
+	// else if either player chooses "Rock" and the other chose "Paper"
+		// player who chose "Paper" wins round 
+			// return string "You Win! Paper beats Rock"
+		// player who chose "Rock" loses round
+			// return string "You Lose! Paper beats Rock"
+
+	// else if either player chooses "Scissors" and the other chose "Paper"
+		// player who chose "Scissors" wins round
+			// return string "You Win! Scissors beats Paper"
+		// player who chose "Paper" loses round
+			// return string "You Lose! Scissors beats Paper"
+
+	// use console.log() to display results of each round
+
+
+</script>
