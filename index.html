@@ -1,16 +1,49 @@
 <script>
 
-const choice = ["Rock", "Paper", "Scissors"]; // three choices
+
 
 function getComputerChoice(choice) {
 	return choice[Math.floor(Math.random() * choice.length)]; // computer randomly chooses from the array
 }
-let computerSelection = getComputerChoice(choice); // the computer choice is now assigned to computerSelection
+const choice = ["Rock", "Paper", "Scissors"]; // three choices
+//let computerSelection = getComputerChoice(choice); // the computer choice is now assigned to computerSelection
+
+
+// Create this function after the playRound function
+///////////////////////////////////////////////////////////////////////
+// Create a FUNCTION "getPlayerChoice"
+	// If getPlayerChoice is not Rock or Paper or Scissors
+		// Tell user to enter their choice again
+	// else if user types 'q'
+		// break function and end game
+		// return message saying "Game ended"
+// get the player to enter choice and make sure it is case insensitive
+	// ensure prompt tells user what to choose from and how to quite game
+// player choice is assigned to variable called playerSelection
+
+
+///////////////////////////////////////////////////////////////////////
+// create a function with two parameters playRound(playerSelection, computerSelection) {
+// if the playerSelection is equal to the computerSelection
+	// display message "Its a Tie"
+//}
+
+// get the player selection and make sure it is case insensitive
+// call the getComputerChoice function and assign the output to a variable getCompuerSelection
+// console.log the output of the function
+
+function playRound(playerSelection, computerSelection) {
+	if (playerSelection == computerSelection) {
+		return console.log("It's a tie!");
+	} else {
+		return console.log("game over");
+	}
+}
+const playerSelection = "Rock";
+const computerSelection = getComputerChoice(choice);
+console.log(playRound(playerSelection, computerSelection));
+
 console.log(computerSelection);
-
-
-// Create a FUNCTION "getPlayerChoice" that takes case insensitive user input 
-	// player choice is assigned to variable called playerSelection
 
 
 // create a FUNCTION "game()"
