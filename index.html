@@ -11,12 +11,13 @@
 	
 	
 		function getPlayerChoice() {
-			const playerChoice = prompt("Please enter either Rock or Paper or Scissors!").toLowerCase();
-			if (!(playerChoice === Choice[0] || playerChoice === Choice[1] || playerChoice === Choice[2])) {
-				alert("That's not a choice, enter a valid choice");
-				getPlayerChoice();
+			const playerInput = prompt("Please enter either Rock or Paper or Scissors!").toLowerCase();
+			if (playerInput === Choice[0] || playerInput === Choice[1] || playerInput === Choice[2]) {
+				playerChoice = playerInput;
+				return playerChoice;
 				} else {
-					return playerChoice;
+					alert("That's not a choice, enter a valid choice");
+					getPlayerChoice();
 				}
 		}
 	
@@ -29,9 +30,9 @@
 		
 	
 			function playRound() {
-				let computerChoice = getComputerChoice();
 				let playerChoice = getPlayerChoice();
-				console.log(`Computer: ${computerChoice}\nPlayer: ${playerChoice}`);
+				let computerChoice = getComputerChoice();
+				console.log(`Player: ${playerChoice}\nComputer: ${computerChoice}`);
 			
 				if (playerChoice === computerChoice) {
 					console.log("It's a tie!");
@@ -78,33 +79,17 @@
 			playRound();
 			console.log(`Player score: ${playerScore}, Computer score: ${computerScore}, Ties: ${ties}`);
 		
-			if (playerScore > computerScore) {
+			if (playerScore === 5 || playerScore > computerScore) {
 			console.log("You won the game");
 			}
 			else {
 				console.log("Computer won the game");
 			} 
 		}
-		
 		game();
 	
 	
 	</script>
-
-	// function determineWinner(playerScore, computerScore) {
-	// 	// if rounds = 5
-	// 		// compare scores
-	// 		// determine winner
-	// 		// display winner
-	// }
-	// determineWinner();
-
-
-	// function resetGame() {
-	// 	// empty variables 
-	// 	// call the game function
-	// }
-	// resetGame();
 
 
 
