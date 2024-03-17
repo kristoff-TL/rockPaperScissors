@@ -18,6 +18,7 @@ function getPlayerChoice() {
 		} else {
 			alert("That's not a choice, enter a valid choice");
 			getPlayerChoice();
+			return playerChoice;
 		}
 }
 
@@ -25,8 +26,8 @@ function game() {
 
 	let playerScore = 0;
 	let computerScore = 0;
-	let ties = 0;
-	let validRounds = 0;
+	let countTies = 0;
+	let countValidRounds = 0;
 
 
 	function playRound() {
@@ -36,48 +37,47 @@ function game() {
 	
 		if (playerChoice === computerChoice) {
 			console.log("It's a tie!");
-			ties++;
+			countTies++;
 			playRound();
 			return;
 		}	else if (playerChoice === "paper" && computerChoice === "rock") {
 			console.log("You Win! Paper beats Rock");
 			playerScore++;
-			validRounds++;
+			countValidRounds++;
 			return;
 		} else if (playerChoice === "rock" && computerChoice === "paper") {
 			console.log("You Lose! Paper beats Rock");
 			computerScore++;
-			validRounds++;
+			countValidRounds++;
 			return;
 		} else if (playerChoice === "rock" && computerChoice === "scissors"){
 			console.log("You Win! Rock beats Scissors");
 			playerScore++;
-			validRounds++;
+			countValidRounds++;
 			return;
 		} else if (playerChoice === "scissors" && computerChoice === "rock") {
 			console.log("You Lose! Rock beats Scissors");
 			computerScore++;
-			validRounds++;
+			countValidRounds++;
 			return;
 		} else if (playerChoice === "scissors" && computerChoice === "paper") {
 			console.log("You Win! Scissors beats Paper");
 			playerScore++;
-			validRounds++;
+			countValidRounds++;
 			return;
 		} else if (playerChoice === "paper" && computerChoice === "scissors") {
 			console.log("You Lose! Scissors beats Paper");
 			computerScore++;
-			validRounds++;
+			countValidRounds++;
 			return;
 		}	else
 			return;
 	}
-	playRound();
-	playRound();
-	playRound();
-	playRound();
-	playRound();
-	console.log(`Player score: ${playerScore}, Computer score: ${computerScore}, Ties: ${ties}`);
+	for (let i=0; i<5; i++) {
+		playRound();
+		console.log(`Player score: ${playerScore}, Computer score: ${computerScore}, Ties: ${countTies}`);
+	};
+	
 
 	if (playerScore === 5 || playerScore > computerScore) {
 	console.log("You won the game");
