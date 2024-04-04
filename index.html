@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
-		<script src="rps.js" defer></script>>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rock Paper Scissors</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="dom.js" defer></script>
+		<script src="rps.js" defer></script> <!-- defer scripts wait until the DOM is ready -->
 	</head>
 
 	<body>
+		<div id="header">
+			<p class="headerText">Rock ~ Paper ~ Scissors</p>
+		</div>
 
+		<div id="container" class="area" >
+			<ul class="circles">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+			</ul>
+			<div id="description">
+				<p class="scoreTitle">Play a quick game of rock paper scissors against the computer!</p>
+				<p class="resultsText">The game runs for five rounds ignoring ties.</p>
+			</div>
+			<div id="buttonContainer">
+				<button id="rock" class="button-54" role="button">Rock</button>
+				<button id="paper" class="button-54" role="button">Paper</button>
+				<button id="scissors" class="button-54" role="button">Scissors</button>
+			</div>
+			<div id="resultsContainer">
+				<div id="runningScore">
+					<p class="scoreTitle">RUNNING SCORE</p>
+					<p class="resultsText">Score here</p>
+				</div>
+				<div id="roundWinner">
+					<p class="scoreTitle">ROUND WINNER</p>
+					<p class="resultsText">Who won the round?</p>
+				</div>
+				<div id="gameWinner">
+					<p class="scoreTitle">GAME WINNER</p>
+					<p class="resultsText">Who won the round?</p>
+				</div>
+			</div>
+		<div id="buttonContainer">
+			<button id="playAgain" class="button-54" role="button">Play again</button>
+		</div>
+		<div id="footer">
+			<p class="headerText">@chrip</p>
+			<p id="whiteText" class="resultsText">This is just a game.</p>
+		</div>
 	</body>
 
 </html>

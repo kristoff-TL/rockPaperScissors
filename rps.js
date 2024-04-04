@@ -8,6 +8,7 @@ function getComputerChoice() {
 
 
 function getPlayerChoice() {
+
 	const playerInput = prompt("Please enter either Rock or Paper or Scissors!").toLowerCase();
 	if (playerInput === Choice[0] || playerInput === Choice[1] || playerInput === Choice[2]) {
 		playerChoice = playerInput;
@@ -70,10 +71,12 @@ function game() {
 		}	else
 			return;
 	}
-	for (let i=0; i<5; i++) {
-		playRound();
-		console.log(`Player score: ${playerScore}, Computer score: ${computerScore}, Ties: ${countTies}`);
-	};
+    playRound();
+    console.log(`Player score: ${playerScore}, Computer score: ${computerScore}, Ties: ${countTies}`);
+	// for (let i=0; i<5; i++) {
+	// 	playRound();
+	// 	console.log(`Player score: ${playerScore}, Computer score: ${computerScore}, Ties: ${countTies}`);
+	// };
 	
 
 	if (playerScore === 5 || playerScore > computerScore) {
