@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
 
 /* Base styles */
 * {
@@ -23,18 +23,25 @@
 	text-decoration: none;
 	letter-spacing: 2px;
 	font-size: 5vmin;
-	color: rgb(255, 255, 255);
+	color: rgb(249, 211, 211);
 	padding: 0 1rem;
 }
 
-#container {
-	min-height: 100vh; /* pushes all content below to the bottom */
+#body {
+	min-height: 100%; /* pushes all content below to the bottom */
 	position: relative;
 	display: flex;
 	align-items: center;
-	padding: 2rem 0 10rem 0;
+	padding: 1rem 0 16rem 0;
 	flex-direction: column;
 	overflow: hidden;
+	margin: 0;
+}
+
+#welcome {
+	font-size: 1.5em;
+	padding: 1em;
+	color: rgb(86, 74, 74);
 }
 
 #description {
@@ -42,7 +49,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;;
-	padding: 0 2rem;
+	padding: 1rem 2rem;
 }
 
 #buttonContainer {
@@ -51,16 +58,17 @@
 	align-items: center;
 	flex-direction: row;
 	flex-wrap: wrap;
-	row-gap: 1em;
+	row-gap: 2em;
 	padding: 2em 2em 2em 2em;
 }
 
 #rock {
-	background-color: rgb(241, 161, 63);
+	color: #352016;
+	background-color: rgb(222, 213, 204);
 }
 
 #paper {
-	background-color: rgb(251, 245, 207);
+	background-color: rgb(255, 255, 255);
 }
 
 #scissors {
@@ -69,17 +77,18 @@
 
 /* CSS */
 .button-54 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 4vmin;
+  font-family: "Bungee", sans-serif;
+  font-size: 1em;
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
   min-width: 10em;
+  max-width: 10em;
   color: #472901;
 	background-color: rgb(224, 224, 223);
   cursor: pointer;
   border: 3px solid;
-	border-radius: 10px;
+	border-radius: 1em;
   padding: 1em 0.5em;
   margin: 0 1em;
   box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
@@ -96,7 +105,7 @@
 }
 
 #playAgain {
-	background-color: rgb(255, 214, 127);
+	background-color: rgb(255, 192, 192);
 }
 
 #resultsContainer {
@@ -121,10 +130,11 @@
 	display: flex;
 	justify-content: center;
 	text-align: center;
+	font-size: 1em;
 	padding: 0 3em;
-	color: rgb(33, 31, 31);
-	font-weight: 700;
-	font-family: "Open Sans", sans-serif;
+	color: rgb(86, 74, 74);
+	font-weight: 300;
+	font-family: "Bungee", sans-serif;
 	min-width: 10em;
 	padding: 0.2em;
 }
@@ -141,18 +151,23 @@
 	justify-content: center;
 	align-content: center;
 	text-align: center;
-	padding: 0.25rem 0;
-	font-family: "Open Sans", sans-serif;
+	font-size: 1.1em;
+	padding: 0.25rem 2em;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	color: rgb(86, 74, 74);
 }
 
+/* Animated Background */
 .area{
-	background: rgb(251, 248, 226);  
-	background: -webkit-linear-gradient(to left, rgb(251, 244, 200), #ffe6fd);  
+	z-index:0;
+	background: -webkit-linear-gradient(bottom, rgb(255, 227, 163), #fff6ec);  
 	width: 100%;
 	height:100vh;
 }
 
 .circles{
+	z-index:-1; /* z score ensures the animation sits behind divs */
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -167,7 +182,7 @@
 	list-style: none;
 	width: 20px;
 	height: 20px;
-	background: rgba(224, 157, 89, 0.2);
+	background: rgba(253, 196, 196, 0.494);
 	animation: animate 25s linear infinite;
 	bottom: -150px;
 	
@@ -219,7 +234,7 @@
 }
 
 .circles li:nth-child(7){
-	left: 35%;
+	left: 15%;
 	width: 150px;
 	height: 150px;
 	animation-delay: 7s;
@@ -249,20 +264,18 @@
 	animation-duration: 11s;
 }
 
-
-
 @keyframes animate {
 
 	0%{
 			transform: translateY(0) rotate(0deg);
-			opacity: 1;
+			opacity: 2;
 			border-radius: 0;
 	}
 
 	100%{
 			transform: translateY(-1000px) rotate(720deg);
 			opacity: 0;
-			border-radius: 50%;
+			border-radius: 60%;
 	}
 
 }
@@ -271,9 +284,10 @@
 	position: absolute;
 	display: flex;
 	justify-content: center;
-	column-gap: 2rem;
-	padding: 3rem 0 5rem 0;
-	right: 0;bottom:0;left:0;
+	height: fixed;
+	width: 100%;
+	align-items: center;
+	padding: 3rem 0 4rem 0;
 	background-color: rgb(33, 31, 31);
 }
 
