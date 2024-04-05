@@ -38,6 +38,7 @@
 	margin: 0;
 }
 
+/* Game Description */
 #welcome {
 	font-size: 1.5em;
 	padding: 1em;
@@ -49,9 +50,64 @@
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;;
-	padding: 1rem 2rem;
+	padding: 0rem 2rem;
 }
 
+.resultsText {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	font-size: 1.1em;
+	padding: 0.25rem 2em;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	color: rgb(86, 74, 74);
+}
+
+/* Scores */
+#scoreContainer {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#scoreBody {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1em;
+	min-width: 4em;
+}
+
+h2 {
+	font-weight: 300;
+	font-family: "Bungee", sans-serif;
+	font-size: 1em;
+	color: rgb(86, 74, 74);
+	padding: 1em 0;
+}
+
+.scoreField {
+	position: relative;
+	display: flex;
+	background-color: white;
+	padding: 0.5em;
+	border-radius: 1em;
+}
+
+#score {
+	font-size: 2em;
+	font-weight: 300;
+	font-family: "Bungee", sans-serif;
+	color: rgb(86, 74, 74);
+	padding: 0.2em 0.6em;
+	
+}
+
+
+/* Buttons */
 #buttonContainer {
 	display: flex;
 	justify-content: center;
@@ -59,7 +115,7 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	row-gap: 2em;
-	padding: 2em 2em 2em 2em;
+	padding: 2em 2em 1em 2em;
 }
 
 #rock {
@@ -75,7 +131,6 @@
 	background-color: rgb(255, 229, 33);
 }
 
-/* CSS */
 .button-54 {
   font-family: "Bungee", sans-serif;
   font-size: 1em;
@@ -108,22 +163,38 @@
 	background-color: rgb(255, 192, 192);
 }
 
+
+/* Game results */
 #resultsContainer {
+	position: relative;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	row-gap: 0.5em;
-	padding: 0 2em;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
-#runningScore, #roundWinner, #gameWinner{
+#resultsBody {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	align-items: center;
+	padding: 1em;
+	min-width: 4em;
+}
+
+.resultsField {
+	position: relative;
+	display: flex;
+	background-color: white;
 	padding: 0.5em;
-	margin: none;
+	border-radius: 0.8em;
+}
+
+#result {
+	font-size: 1em;
+	font-weight: 300;
+	font-family: "Bungee", sans-serif;
+	color: rgb(86, 74, 74);
+	padding: 0.5em 3em;
+	
 }
 
 .scoreTitle {
@@ -146,17 +217,7 @@
 	color: #ffffff;
 }
 
-.resultsText {
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	text-align: center;
-	font-size: 1.1em;
-	padding: 0.25rem 2em;
-	font-family: "Montserrat", sans-serif;
-	font-weight: 500;
-	color: rgb(86, 74, 74);
-}
+
 
 /* Animated Background */
 .area{
